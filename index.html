@@ -281,12 +281,15 @@
         </div>
 
         <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="Enter Your E-mail" required>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="e75cbbdc-7b92-4de0-aac0-47e6b4920c79">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" placeholder="Enter Your E-Mail" required>
 
-                <input type="" placeholder="Enter Your Subject">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <input type="Subject" name="subject" placeholder="Enter Your Subject">
+                <textarea name="Message" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 <input type="submit" value="Submit" class="send">
             </form>
         </div>
